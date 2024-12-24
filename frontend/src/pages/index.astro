@@ -1,0 +1,51 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Accordion, AccordionItem } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl" id="features">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-3 lg:grid-cols-4">
+        <Feature icon="mdi:add" title="Create A Blog">
+          Fitur Create Blog memungkinkan pengguna untuk mempublikasikan artikel atau blog mereka langsung melalui platform website. Pengguna dapat mengisi judul, deskripsi, dan isi konten.
+        </Feature>
+        <Feature icon="mdi:responsive" title="Responsive">
+          Website responsif adalah situs web yang dirancang untuk memberikan pengalaman pengguna yang optimal di berbagai perangkat, mulai dari desktop, tablet, hingga ponsel pintar.
+        </Feature>
+        <Feature icon="mdi:book-open-page-variant" title="Blog">
+          Fitur blog di website ini memungkinkan pengguna atau pengelola situs untuk membacaartikel atau konten berbentuk tulisan secara terstruktur.
+        </Feature>
+        <Feature icon="mdi:theme-light-dark" title="Light/Dark mode">
+          Fitur dark mode di website memungkinkan pengguna untuk mengubah tampilan antarmuka dari tema terang (light mode) ke tema gelap.
+        </Feature>
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="https://media.istockphoto.com/id/1373105718/photo/man-working-or-studying-with-book-business-and-education-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=MgtjFNYVy9VATTQtiAd_cfyAb-eXgWkFSAsnVlxYifE=">
+    <h2>Kemudahan Akses Membaca</h2>
+    <p class="text-2xl">
+      Kemudahan akses membaca di website mengacu pada desain dan fitur yang membuat konten mudah dibaca dan diakses oleh semua pengunjung.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D" reverseImg={true}>
+    <h2>Tanpa Biaya</h2>
+    <p class="text-2xl">
+      Pengguna dapat membaca dan menambahkan blog tanpa mengeluarkan uang, sangat cocok untuk pemula atau mereka yang memiliki anggaran terbatas💸.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="https://images.unsplash.com/photo-1663524789636-2df735c55155?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverseImg={false}>
+    <h2>Website Responsif</h2>
+    <p class="text-2xl">
+      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
+      reaching WCAG AA compliance.
+    </p>
+  </ContentMedia>
+</DefaultLayout>
